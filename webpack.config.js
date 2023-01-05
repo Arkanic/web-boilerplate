@@ -9,7 +9,8 @@ module.exports = {
     mode: "development",
 
     entry: {
-        main: "./src/ts/index.ts"
+        main: "./src/ts/index.ts",
+        worker: "./src/ts/worker.ts"
     },
     module: {
         rules: [
