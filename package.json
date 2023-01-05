@@ -1,0 +1,35 @@
+{
+  "name": "webwav",
+  "version": "1.0.0",
+  "description": "record rtl sdr on web - produce wav file",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --progress",
+    "host": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkanic/webwav.git"
+  },
+  "author": "Arkanic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arkanic/webwav/issues"
+  },
+  "homepage": "https://github.com/Arkanic/webwav#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "express": "^4.18.2",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
