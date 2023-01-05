@@ -1,3 +1,5 @@
 import "../css/main.css"
 
-console.log("index.ts");
+let text = document.getElementById("text")!;
+
+text.innerHTML = "js worky";

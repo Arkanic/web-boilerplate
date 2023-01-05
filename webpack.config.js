@@ -8,7 +8,9 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 module.exports = {
     mode: "development",
 
-    entry: "./src/ts/index.ts",
+    entry: {
+        main: "./src/ts/index.ts"
+    },
     module: {
         rules: [
             {
@@ -20,7 +22,19 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     "style-loader",
-                    "css-loader"
+                    {
+                        loader: MiniCSSExtractPlugin.loader,
+                        options: {
+                            esModule: false
+                        }
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: false,
+                            sourceMap: false
+                        }
+                    }
                 ]
             },
             {
@@ -50,7 +64,8 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             filename: "index.html",
-            template: "src/index.html"
+            template: "src/index.html",
+            chunks: ["main"]
         }),
         new CleanWebpackPlugin()
     ],
